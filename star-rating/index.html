@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+
+    <style>
+      .fa-star-o:before {
+        content: "\f006";
+        color: #5f6368;
+      }
+
+      .fa-star:before {
+        content: "\f005";
+        color: #d56e0c;
+      }
+
+      .center {
+        width: 100wh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 5rem;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div id="star"></div>
+      <div id="display-star"></div>
+    </div>
+
+    <script src="star.js"></script>
+  </body>
+</html>
