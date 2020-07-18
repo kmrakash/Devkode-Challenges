@@ -44,7 +44,7 @@ class Board {
       this.fill(num);
     });
 
-    this.board.addEventListener("mouseover", (e) => {
+    this.board.addEventListener("dragover", (e) => {
       const num = e.target.dataset["Value"];
       console.log(e.target.dataset["Value"]);
       this.fill(num);
