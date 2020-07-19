@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Art</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pixel Art Maker</h1>
+    <div id="size">
+      <form action="#" id="form">
+        <label for="row">Row</label>
+        <input type="number" id="r" name="row" />
+        <label for="col">Col</label>
+        <input type="number" id="c" name="col" />
+
+        <button type="submit">Set</button>
+      </form>
+
+      <button id="clear">CLEAR</button>
+    </div>
+    <div id="board"></div>
+
+    <script src="script.js"></script>
+    <script>
+      const rowEl = document.getElementById("r");
+      const colEL = document.getElementById("c");
+      const formEl = document.getElementById("form");
+      let rowValue = 10;
+      let colValue = 10;
+      new Board("#board", rowValue, colValue);
+      formEl.addEventListener("submit", (e) => {
+        rowValue = rowEl.value;
+        colValue = colEL.value;
+        console.log(rowValue);
+        console.log(colValue);
+        new Board("#board", rowValue, colValue);
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
