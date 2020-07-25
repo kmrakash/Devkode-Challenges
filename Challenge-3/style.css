@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: #faeee7; */
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+#board {
+  height: 750px;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.col {
+  flex: 1;
+  border: 1px solid #000;
+}
