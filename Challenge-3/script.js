@@ -36,11 +36,13 @@ class Board {
   bindEvents() {
     this.el.addEventListener("click", (e) => {
       this.fill(e);
+
+      e.stopPropagation();
     });
-    // document.querySelector("body").addEventListener("click", () => {
-    //   console.log("clicked");
-    //   this.reset();
-    // });
+    document.addEventListener("click", () => {
+      // console.log("clicked");
+      this.reset();
+    });
   }
 
   fill(e) {
@@ -52,7 +54,7 @@ class Board {
     ];
     const r = parseInt(this.clickedCell[0][0]);
     const c = parseInt(this.clickedCell[0][1]);
-    console.log(r, c);
+    // console.log(r, c);
     const d = r + c;
     const cellEl = document.querySelectorAll(`[data-dvalue = "${d}"]`);
     // console.log(cellEl);
@@ -64,12 +66,12 @@ class Board {
     for (let i = r, j = c; i < this.row, j < this.col; i++, j++) {
       const cell = document.querySelector(`[data-cell = "${i + ":" + j}"]`);
       cell ? (cell.style.background = this.fillColor) : null;
-      console.log(cell);
+      // console.log(cell);
     }
     for (let i = r, j = c; i >= 0, j >= 0; i--, j--) {
       const cell = document.querySelector(`[data-cell = "${i + ":" + j}"]`);
       cell ? (cell.style.background = this.fillColor) : null;
-      console.log(cell);
+      // console.log(cell);
     }
   }
 
