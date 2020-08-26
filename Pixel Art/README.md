@@ -2,6 +2,8 @@
 
 The challenge was to create something like this:
 
+##### [live here](https://jsfiddle.net/0frkap32/)
+
 <img src="assets/demo.png">
 
 ### Features
